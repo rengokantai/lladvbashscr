@@ -55,5 +55,44 @@ to improve performance:
 echo 1+1|bc  #slow
 echo $((1+2)) #better
 ```
- 
+
+#####3
+######4
+```
+[] : flexible and comp
+[[]]: more features
+```
+######5
+```
+VAR=$(echo "scale=9;10/3"|bc)   (9 digits after decimal)
+echo $VAR  //3.333333333
+```
+#####4
+######3
+use _ : | to substitute escape char when using sed.
+```
+sed 's_/usr/local/bin_/common/bin_' filename
+sed 's/\/usr\/local\/bin/\/common\/bin/' filename
+```
+usepecific patterns
+```
+sed 's/ab/(ab)/ filename    # add parentheses. naive way
+sed 's/[a-z]*/(&)/' filename   #sub first pattern using &
+```
+sed -r (extended regex) or -E
+```
+echo "123 abc" | sed -r 's/[0-9]+/& &/'
+```
+######4 awk basic
+```
+awk -F : '/usr/ {print $4}' /etc/passwd  #4th field contains /usr/
+awk -F : '$NF ~/bash/' /etc/passwd
+awk '/^[[:alpha:][:space:]]+$/ {print' /file
+```
+######Exer4
+```
+BEGIN {printf "Time\theader1\theader2\t\n"} /^[[:digit:][:space:][:alpha:]]+$/{print $1,$2}
+```
+(not finished)
+
  
