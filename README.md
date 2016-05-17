@@ -94,5 +94,12 @@ awk '/^[[:alpha:][:space:]]+$/ {print' /file
 BEGIN {printf "Time\theader1\theader2\t\n"} /^[[:digit:][:space:][:alpha:]]+$/{print $1,$2}
 ```
 (not finished)
+#####5
+######4
+```
+id -gn
+id -un
+"`id -gn` = `if -un`"
+```
+bubble sort.(exer 5 solution. not finished)
 
- 
