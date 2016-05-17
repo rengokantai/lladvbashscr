@@ -5,7 +5,9 @@
 cd /lib/modules/`uname -r`
 ```
 ######3 argu
+```
 [-z $1]  //user arg exists?
+```
 ```
 declare -r var=1  (readonly)
 declare -i var=1 (number)
@@ -15,13 +17,15 @@ declare -x var=1 (export)
 ```
 
 ######4 iter1
+```
 [-n $var] the option is correct?
- 
+ ```
  ######6 arrays
+ ```
  ${arr[*]} all values  
  ${!arr[*]} all index values currently in use  
  ${#arr[*]} how many items there are in the array  
- 
+ ```
  ######exer 1 solution
  show last command(script) exit code
  ```
